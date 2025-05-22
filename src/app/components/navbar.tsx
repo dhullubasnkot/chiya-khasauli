@@ -16,7 +16,7 @@ export default function Navbar() {
   const [desktopDropdown, setDesktopDropdown] = useState<"menu" | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [mobileDropdown, setMobileDropdown] = useState<null | string>(null);
+  // const [mobileDropdown, setMobileDropdown] = useState<null | string>(null);
   const [filteredHotels, setFilteredHotels] = useState(HotelItems);
 
   useEffect(() => {

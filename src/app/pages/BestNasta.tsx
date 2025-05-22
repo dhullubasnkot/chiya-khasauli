@@ -11,7 +11,7 @@ export default function BestNastaPage() {
       title1="Perfect Picks for Your Snack Time"
       items={Chiya}
       noslice={true}
-      taste="/items/nasta"
+      taste="/pages/Momo"
       buttonText="More Nasta"
     />
   );
