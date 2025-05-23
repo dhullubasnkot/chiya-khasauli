@@ -2,6 +2,7 @@ import Image from "next/image";
 import GuffGaffData from "@/app/GuffGaffdata/guffdata";
 import Navbar from "@/app/components/navbar";
 import Link from "next/link";
+import Footer from "@/app/components/footer";
 
 type Poem = {
   id: string | number;
@@ -128,6 +129,7 @@ export default async function AuthorPoemsPage({ params }: Props) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

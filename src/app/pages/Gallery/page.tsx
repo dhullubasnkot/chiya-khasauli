@@ -2,6 +2,7 @@ import GalleryPrograms from "@/app/gallerydata/gallerydata";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
 export default function Gallery() {
   return (
@@ -35,6 +36,7 @@ export default function Gallery() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

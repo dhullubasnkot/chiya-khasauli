@@ -3,6 +3,7 @@ import HotelItems from "@/app/data/hoteldata";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Footer from "@/app/components/footer";
 
 interface Item {
   id: number;
@@ -106,7 +107,7 @@ export default async function ItemDetails({ params }: Props) {
             <h2 className="text-3xl font-bold text-amber-800 mb-8 text-center">
               You Might Also Like
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
               {similarItems.map((similar) => (
                 <Link
                   href={`/items/${similar.id}`}
@@ -139,6 +140,7 @@ export default async function ItemDetails({ params }: Props) {
           </section>
         )}
       </main>
+      <Footer />
     </>
   );
 }

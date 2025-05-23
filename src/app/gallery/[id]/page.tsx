@@ -4,6 +4,7 @@ import Image from "next/image";
 import GalleryPrograms from "@/app/gallerydata/gallerydata";
 import { notFound } from "next/navigation";
 import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
 interface Props {
   params: Promise<{
@@ -121,6 +122,7 @@ export default function ProgramGallery({ params }: Props) {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }
