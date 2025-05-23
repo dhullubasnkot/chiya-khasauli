@@ -284,7 +284,7 @@ export default function Navbar() {
               Chiya
             </Link>
             <Link
-              href="/eheki"
+              href="/"
               onClick={() => setMobileOpen(false)}
               className="hover:text-amber-600"
             >
@@ -326,7 +326,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/gallery"
+              href="/pages/Gallery"
               onClick={() => setMobileOpen(false)}
               className="hover:text-amber-600"
             >
