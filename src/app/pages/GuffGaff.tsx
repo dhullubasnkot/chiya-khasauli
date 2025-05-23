@@ -1,15 +1,20 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GuffGaffData from "@/app/GuffGaffdata/page";
+import GuffGaffData from "@/app/GuffGaffdata/guffdata";
 import Navbar from "@/app/components/navbar";
 
 type GuffGaffProps = {
-  noSlice: boolean;
-  noNavbar: true;
+  noSlice?: boolean;
+  noNavbar?: boolean;
 };
 
-export default function GuffGaff({ noSlice, noNavbar }: GuffGaffProps) {
+export default function GuffGaffMain({
+  noSlice = true,
+  noNavbar = true,
+}: GuffGaffProps) {
   const poemsToShow = noSlice ? GuffGaffData.slice(0, 4) : GuffGaffData;
 
   return (
@@ -17,7 +22,7 @@ export default function GuffGaff({ noSlice, noNavbar }: GuffGaffProps) {
       {!noNavbar && <Navbar />}
       <section className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-inter">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-2xl font-extrabold text-center text-amber-700 mb-12 tracking-tight leading-tight">
+          <h1 className="text-4xl font-extrabold text-center text-amber-700 mb-12 tracking-tight leading-tight">
             Chiya Khasauli Guff Gaff
           </h1>
 

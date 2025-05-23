@@ -1,4 +1,4 @@
-import ReviewData from "../reviewdata/page";
+import ReviewData from "../reviewdata/reviewdata";
 
 export default function ChiyaReviewsPage({ noslice = true }) {
   const displayedItems = noslice ? ReviewData.slice(0, 4) : ReviewData;

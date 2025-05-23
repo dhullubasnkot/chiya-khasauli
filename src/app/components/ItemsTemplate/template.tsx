@@ -9,7 +9,7 @@ type Item = {
 };
 
 interface TemplateProps {
-  title: string;
+  title?: string;
   title1?: string;
   items: Item[];
   noslice?: boolean;
@@ -66,7 +66,7 @@ export default function Template({
 
         {noslice && (
           <div className="flex justify-center mt-8">
-            <Link href={taste}>
+            <Link href={taste as string}>
               <button className="px-6 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition duration-300">
                 {buttonText}
               </button>

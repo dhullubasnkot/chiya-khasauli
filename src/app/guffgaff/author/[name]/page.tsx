@@ -1,26 +1,38 @@
 import Image from "next/image";
-import GuffGaffData from "@/app/GuffGaffdata/page";
+import GuffGaffData from "@/app/GuffGaffdata/guffdata";
 import Navbar from "@/app/components/navbar";
 import Link from "next/link";
-export default function AuthorPoemsPage({
-  params,
-}: {
-  params: { name: string };
-}) {
-  const decodedName = decodeURIComponent(params.name);
 
-  const poemsByAuthor = GuffGaffData.filter(
-    (poem) => poem.author === decodedName
+type Poem = {
+  id: string | number;
+  author: string;
+  image: string;
+  content: string;
+};
+
+type Props = {
+  params: Promise<{
+    name: string;
+  }>;
+};
+
+// Mark component async
+export default async function AuthorPoemsPage({ params }: Props) {
+  // Await params before use
+  const resolvedParams = await params;
+  const decodedName = decodeURIComponent(resolvedParams.name);
+
+  const poemsByAuthor: Poem[] = GuffGaffData.filter(
+    (poem: Poem) => poem.author === decodedName
   );
 
-  // Get similar guff (poems by other authors)
-  const similarPoems = GuffGaffData.filter(
-    (poem) => poem.author !== decodedName
-  ).slice(0, 3); // show only 3 similar items
+  const similarPoems: Poem[] = GuffGaffData.filter(
+    (poem: Poem) => poem.author !== decodedName
+  ).slice(0, 3);
 
   if (poemsByAuthor.length === 0) {
     return (
-      <div className="flex items-center justify-center min-h-[60vh] ">
+      <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center p-8 bg-white rounded-lg shadow-xl border border-red-200">
           <h1 className="text-4xl font-extrabold text-red-700 mb-4 animate-bounce">
             Oops!
@@ -52,7 +64,7 @@ export default function AuthorPoemsPage({
             {poemsByAuthor.map((poem) => (
               <div
                 key={poem.id}
-                className="bg-white rounded-3xl shadow-xl p-8 border border-amber-200  flex flex-col"
+                className="bg-white rounded-3xl shadow-xl p-8 border border-amber-200 flex flex-col"
               >
                 <div className="flex items-center gap-6 mb-6">
                   <Image
@@ -77,7 +89,6 @@ export default function AuthorPoemsPage({
             ))}
           </div>
 
-          {/* Similar Guff Section */}
           <div className="mt-20">
             <h2 className="text-2xl font-semibold text-amber-700 mb-6">
               Similar Guff

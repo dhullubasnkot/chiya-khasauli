@@ -9,7 +9,7 @@ import {
   FiSearch,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import HotelItems from "../data/page";
+import HotelItems from "../data/hoteldata";
 
 export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -203,13 +203,13 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/gallery"
+            href="/pages/Gallery"
             className="hover:text-amber-600 transition-colors duration-300"
           >
             Gallery
           </Link>
           <Link
-            href="/pages/GuffGaf"
+            href="/pages/GuffGafnew"
             className="hover:text-amber-600 transition-colors duration-300"
           >
             Guff Gaff

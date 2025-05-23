@@ -1,5 +1,5 @@
-import Template from "../components/ItemsTemplate/page";
-import HotelItems from "../data/page";
+import Template from "../components/ItemsTemplate/template";
+import HotelItems from "../data/hoteldata";
 
 export default function BestNastaPage() {
   const Chiya = HotelItems.filter(

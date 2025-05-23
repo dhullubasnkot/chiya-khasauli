@@ -1,5 +1,5 @@
 import Navbar from "@/app/components/navbar";
-import HotelItems from "@/app/data/page";
+import HotelItems from "@/app/data/hoteldata";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -16,15 +16,26 @@ interface Item {
 }
 
 interface Props {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ItemDetails({ params }: Props) {
-  const item: Item | undefined = HotelItems.find(
-    (item) => String(item.id) === params.id
-  );
+export default async function ItemDetails({ params }: Props) {
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+
+  const rawItem = HotelItems.find((item) => String(item.id) === id);
+
+  const item: Item | undefined = rawItem
+    ? {
+        ...rawItem,
+        isAvailable:
+          typeof rawItem.isAvailable === "boolean"
+            ? rawItem.isAvailable
+            : false,
+      }
+    : undefined;
 
   if (!item) return notFound();
 
@@ -38,7 +49,7 @@ export default function ItemDetails({ params }: Props) {
       <main className="min-h-screen pb-16">
         {/* Main Section - Full Width */}
         <section className="w-full mb-10">
-          <div className="grid md:grid-cols-2 gap-10  mx-0 px-8 py-10 rounded-none  border-t border-amber-100 animate-fade-in">
+          <div className="grid md:grid-cols-2 gap-10 mx-0 px-8 py-10 border-t border-amber-100 animate-fade-in">
             <div className="relative w-full h-72 md:h-[450px] rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
               <Image
                 src={item.image}
@@ -89,7 +100,7 @@ export default function ItemDetails({ params }: Props) {
           </div>
         </section>
 
-        {/* Similar Items - Full Width */}
+        {/* Similar Items */}
         {similarItems.length > 0 && (
           <section className="w-full py-12 px-6">
             <h2 className="text-3xl font-bold text-amber-800 mb-8 text-center">
@@ -130,4 +141,11 @@ export default function ItemDetails({ params }: Props) {
       </main>
     </>
   );
+}
+
+// Optional: If you're statically generating pages
+export async function generateStaticParams() {
+  return HotelItems.map((item) => ({
+    id: String(item.id),
+  }));
 }

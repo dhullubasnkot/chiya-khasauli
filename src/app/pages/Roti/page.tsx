@@ -1,6 +1,6 @@
-import Template from "@/app/components/ItemsTemplate/page";
+import Template from "@/app/components/ItemsTemplate/template";
 import Navbar from "@/app/components/navbar";
-import HotelItems from "@/app/data/page";
+import HotelItems from "@/app/data/hoteldata";
 export default function Roti() {
   const Roti = HotelItems.filter((item) => item.category === "Roti");
   return (

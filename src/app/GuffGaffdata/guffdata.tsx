@@ -4,7 +4,7 @@ const GuffGaffData = [
     author: "Sujan Paudel",
     image: "/cup.jpg",
     content:
-      "Chiya chautari ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo. Chiya chautari ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.Chiya chautari ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.Chiya chautari ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.",
+      "Chiya khasauli ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo. Chiya khasauli ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.Chiya khasauli ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.Chiya khasauli ma basera guff garyo dinbhar, mutu bhitra lukeko kura haru samjhana jasto lagyo.",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const GuffGaffData = [
     author: "Anita Sharma",
     image: "/cup.jpg",
     content:
-      "Chautari ko chiya le samjhana haru jagauchha, ajhai maya ko ras garchha.",
+      "khasauli ko chiya le samjhana haru jagauchha, ajhai maya ko ras garchha.",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const GuffGaffData = [
     author: "Rajesh Thapa",
     image: "/cup.jpg",
     content:
-      "Purana chautari ra purana katha haru, chiya ko bas ma feri jivit hunchhan.",
+      "Purana khasauli ra purana katha haru, chiya ko bas ma feri jivit hunchhan.",
   },
 ];
 export default GuffGaffData;
