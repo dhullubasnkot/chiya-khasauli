@@ -179,7 +179,7 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </li>
-{/* smokes zone */}
+                  {/* smokes zone */}
                   <li className="group relative">
                     <span className="flex justify-between items-center p-3 hover:bg-gray-50 cursor-pointer text-gray-800 hover:text-amber-600 transition-colors duration-200">
                       Smokes{" "}

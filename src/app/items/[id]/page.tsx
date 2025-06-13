@@ -66,6 +66,7 @@ export default async function ItemDetails({ params }: Props) {
             </div>
 
             {/* Item Content */}
+            {/* Item Content */}
             <div className="space-y-6 flex flex-col justify-center">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-800 leading-tight">
                 {item.name}

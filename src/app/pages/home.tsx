@@ -6,6 +6,7 @@ export default function FirstPage() {
     <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       <div className="relative z-10 container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12">
         {/* Left: Image */}
+
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500">
             <Image
