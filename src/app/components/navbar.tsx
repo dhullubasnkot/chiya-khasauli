@@ -55,11 +55,11 @@ export default function Navbar() {
       <div className="flex justify-between items-center max-w-7xl mx-auto py-4 px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/chiya.png"
+            src="/chiyabatauli.png"
             alt="Logo"
-            width={80}
-            height={80}
-            className="rounded-full shadow-sm"
+            width={90}
+            height={90}
+            className=""
           />
         </Link>
 

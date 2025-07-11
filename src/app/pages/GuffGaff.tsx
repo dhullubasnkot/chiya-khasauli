@@ -23,7 +23,7 @@ export default function GuffGaffMain({
       <section className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-inter">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-extrabold text-center text-amber-700 mb-12 tracking-tight leading-tight">
-            Chiya Khasauli Guff Gaff
+            Chiya Batauli Guff Gaff
           </h1>
 
           {poemsToShow.length === 0 ? (

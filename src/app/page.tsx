@@ -12,9 +12,10 @@ export default function Home() {
       <Navbar />
       <FirstPage />
       <BestChiyaPage />
-      <ChiyaReviewsPage />
+
       <BestNastaPage />
       <GuffGaffMain />
+      <ChiyaReviewsPage />
       <Footer />
     </>
   );
