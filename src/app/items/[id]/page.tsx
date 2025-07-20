@@ -35,6 +35,9 @@ export default async function ItemDetails({ params }: Props) {
           typeof rawItem.isAvailable === "boolean"
             ? rawItem.isAvailable
             : false,
+        ingredients: Array.isArray(rawItem.ingredients)
+          ? rawItem.ingredients
+          : [],
       }
     : undefined;
 

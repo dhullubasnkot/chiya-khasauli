@@ -17,6 +17,14 @@ export default function GuffGaffMain({
 }: GuffGaffProps) {
   const poemsToShow = noSlice ? GuffGaffData.slice(0, 4) : GuffGaffData;
 
+  // Helper: Strip HTML tags from poem content for preview
+  const stripHtml = (html: string) =>
+    html
+      .replace(/<[^>]+>/g, "")
+      .split(" ")
+      .slice(0, 25)
+      .join(" ") + "...";
+
   return (
     <>
       {!noNavbar && <Navbar />}
@@ -57,7 +65,7 @@ export default function GuffGaffMain({
                       </div>
                     </div>
                     <p className="text-gray-700 text-base leading-relaxed flex-grow">
-                      {poem.content.split(" ").slice(0, 25).join(" ")}...
+                      {stripHtml(poem.content)}
                     </p>
                     <div className="mt-4 text-right">
                       <span className="text-amber-600 font-medium hover:underline text-sm">

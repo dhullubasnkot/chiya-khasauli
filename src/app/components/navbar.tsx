@@ -45,7 +45,7 @@ export default function Navbar() {
       (chiya) =>
         chiya.name.toLowerCase().includes(query) ||
         chiya.category.toLowerCase().includes(query) ||
-        chiya.ingredients.some((genre) => genre.toLowerCase().includes(query))
+        chiya.ingredients?.some((genre) => genre.toLowerCase().includes(query))
     );
     setFilteredHotels(results);
   };
@@ -159,15 +159,13 @@ export default function Navbar() {
                     </ul>
                   </li>
 
-                  <li className="group relative">
+                  {/* <li className="group relative"> */}
+                  <Link href="/pages/colddrinks">
                     <span className="flex justify-between items-center p-3 hover:bg-gray-50 cursor-pointer text-gray-800 hover:text-amber-600 transition-colors duration-200">
-                      Cold Drinks{" "}
-                      <ChevronDown
-                        size={16}
-                        className="rotate-90 group-hover:rotate-180 transition-transform duration-200"
-                      />
+                      Cold Drinks
                     </span>
-                    <ul className="absolute top-0 left-full ml-1 w-48 bg-white shadow-lg rounded-lg border border-gray-100 hidden group-hover:block transition-all duration-300 ease-in-out py-1">
+                  </Link>
+                  {/* <ul className="absolute top-0 left-full ml-1 w-48 bg-white shadow-lg rounded-lg border border-gray-100 hidden group-hover:block transition-all duration-300 ease-in-out py-1">
                       <li className="p-3 hover:bg-gray-50 text-gray-700 hover:text-amber-600 transition-colors duration-200">
                         <Link href="/menu/coca-cola">Coca-Cola</Link>
                       </li>
@@ -177,8 +175,8 @@ export default function Navbar() {
                       <li className="p-3 hover:bg-gray-50 text-gray-700 hover:text-amber-600 transition-colors duration-200">
                         <Link href="/menu/frooti">Frooti</Link>
                       </li>
-                    </ul>
-                  </li>
+                    </ul> */}
+                  {/* </li> */}
                   {/* smokes zone */}
                   <li className="group relative">
                     <span className="flex justify-between items-center p-3 hover:bg-gray-50 cursor-pointer text-gray-800 hover:text-amber-600 transition-colors duration-200">
@@ -190,7 +188,7 @@ export default function Navbar() {
                     </span>
                     <ul className="absolute top-0 left-full ml-1 w-48 bg-white shadow-lg rounded-lg border border-gray-100 hidden group-hover:block transition-all duration-300 ease-in-out py-1">
                       <li className="p-3 hover:bg-gray-50 text-gray-700 hover:text-amber-600 transition-colors duration-200">
-                        <Link href="/menu/hukka">Hukka</Link>
+                        <Link href="/pages/hukka">Hukka</Link>
                       </li>
                       <li className="p-3 hover:bg-gray-50 text-gray-700 hover:text-amber-600 transition-colors duration-200">
                         <Link href="/menu/cigarette">Cigarette</Link>

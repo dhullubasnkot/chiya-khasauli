@@ -17,9 +17,7 @@ type Props = {
   }>;
 };
 
-// Mark component async
 export default async function AuthorPoemsPage({ params }: Props) {
-  // Await params before use
   const resolvedParams = await params;
   const decodedName = decodeURIComponent(resolvedParams.name);
 
@@ -83,9 +81,10 @@ export default async function AuthorPoemsPage({ params }: Props) {
                     <p className="text-sm text-gray-500">Author</p>
                   </div>
                 </div>
-                <p className="text-gray-800 leading-relaxed text-lg flex-grow">
-                  {poem.content}
-                </p>
+                <p
+                  className="text-gray-800 leading-relaxed text-lg flex-grow whitespace-pre-line"
+                  dangerouslySetInnerHTML={{ __html: poem.content }}
+                ></p>
               </div>
             ))}
           </div>
@@ -120,9 +119,10 @@ export default async function AuthorPoemsPage({ params }: Props) {
                       </div>
                     </div>
                   </Link>
-                  <p className="text-gray-700 text-sm line-clamp-4">
-                    {poem.content}
-                  </p>
+                  <p
+                    className="text-gray-700 text-sm line-clamp-4"
+                    dangerouslySetInnerHTML={{ __html: poem.content }}
+                  ></p>
                 </div>
               ))}
             </div>

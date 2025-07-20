@@ -1,4 +1,16 @@
-const HotelItems = [
+type HotelItem = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+  ingredients?: string[];
+  description: string;
+  isAvailable?: boolean;
+  subcategory?: string;
+};
+
+const HotelItems: HotelItem[] = [
   {
     id: 1,
     name: "Masala Tea",
@@ -289,6 +301,120 @@ const HotelItems = [
     category: "Roti",
     ingredients: ["Fapar Flour", "Whete Flor", "Water", "Salt"],
     description: "Traditional Nepali flatbread made from Fapar.",
+  },
+  {
+    id: 30,
+    name: "Sprite",
+    price: 60,
+    image: "/colddrinks/sprite.png",
+    category: "colddrinks",
+    description: "A refreshing lemon-lime soda with a crisp taste.",
+    // ingredients: [
+    //   "Carbonated Water",
+    //   "High Fructose Corn Syrup",
+    //   "Citric Acid",
+    //   "Natural Flavors",
+    // ],
+    isAvailable: true,
+  },
+  {
+    id: 31,
+    name: "Coca Cola",
+    price: 60,
+    image: "/colddrinks/coke.jpg",
+    category: "colddrinks",
+    description: "Classic cola beverage, chilled and refreshing.",
+    // ingredients: [
+    //   "Carbonated Water",
+    //   "Sugar",
+    //   "Caramel Color",
+    //   "Phosphoric Acid",
+    //   "Natural Flavors",
+    //   "Caffeine",
+    // ],
+    isAvailable: true,
+  },
+  {
+    id: 32,
+    name: "Fanta",
+    price: 60,
+    image: "/colddrinks/fanta.jpg",
+    category: "colddrinks",
+    description: "A fruity orange soda with a vibrant taste.",
+    // ingredients: [
+    //   "Carbonated Water",
+    //   "Sugar",
+    //   "Caramel Color",
+    //   "Phosphoric Acid",
+    //   "Natural Flavors",
+    //   "Caffeine",
+    // ],
+    isAvailable: true,
+  },
+  {
+    id: 33,
+    name: "Mint Flavored Hukka",
+    price: 299,
+    image: "/smokes/Hukka/mint.webp",
+    category: "Hukka",
+    description:
+      "A refreshing mint-flavored Hukka for a cool smoking experience.",
+    ingredients: ["Mint Flavored Tobacco", "Water", "Hukka Pipe"],
+    isAvailable: true,
+  },
+  {
+    id: 34,
+    name: "Pan Flavored Hukka",
+    price: 299,
+    image: "/smokes/Hukka/pan.jpg",
+    category: "Hukka",
+    description: "A unique Pan flavored Hukka for a traditional taste.",
+    ingredients: ["Pan Flavored Tobacco", "Water", "Hukka Pipe"],
+    isAvailable: true,
+  },
+  {
+    id: 35,
+    name: "Double Apple",
+    price: 299,
+    image: "/smokes/hukka/doubleapple.jpg",
+    category: "Hukka",
+    description: "Refresh Your Mood With Double Apple Flavored Hukka",
+    ingredients: ["Double Apple Tobacco", "Water", "Hukka Pipe"],
+    isAvailable: true,
+  },
+  {
+    id: 36,
+    name: "Mix Flavored",
+    price: 299,
+    image: "/smokes/hukka/mix.jpg",
+    category: "Hukka",
+    description: "Refresh Your Mood With Mix Flavored Hukka",
+    ingredients: ["Mix Flavored Tobacco", "Water", "Hukka Pipe"],
+    isAvailable: true,
+  },
+  {
+    id: 37,
+    name: "Kettle Chiya",
+    price: 250,
+    image: "/kittle.webp",
+    category: "Tea",
+    description:
+      "A traditional blend brewed fresh in a kettle, perfect for sharing with friends or family. Choose from creamy milk tea or strong black tea, served hot to warm your moments together.",
+    ingredients: ["Tea Leaves", "Milk", "Sugar", "Spices"],
+    isAvailable: true,
+    subcategory: "Special Items",
+  },
+  {
+    id: 38,
+    name: "Kodo ko Sel Roti",
+    price: 80,
+    image: "/Roti/kodosel.jpg",
+    category: "Roti",
+    description:
+      "A traditional Nepali sweet rice ring, made with Kodo flour, perfect for festivals and special occasions.",
+    ingredients: ["Kodo Flour", "Sugar", "Water", "Cardamom"],
+    isAvailable: true,
+    subcategory: "Special Items",
   },
 ];
 
